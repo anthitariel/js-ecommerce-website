@@ -1,65 +1,159 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="product-details-styles.css">
-    <title>E-commerce &boxv; The new Amazon</title>
-    <link rel="icon" type="image/x-icon" href="/svg/logo.svg">
-</head>
-<body>
+    <title>E-commerce website</title>
+    <link rel="stylesheet" href="product-details.css" />
+  </head>
 
-<header class="container__navigation">
-    <nav class="navigation">
-        <div class="navigation__logo">
-            <a href="/index.html" class="link home-logo">
-                <img src="/svg/logo.svg" style="width: 30px; height: 30px;" alt="Logo Image" class="logo-img">
-            </a>
-            <a href="/index.html" class="link back-arrow" style="width: 30px; height: 30px;">
-                <ion-icon name="arrow-back-outline" class="back-arrow"></ion-icon>
-            </a>
+  <body>
+    <!-- top menu navigation -->
+
+    <header>
+      <nav class="navbar">
+        <div class="navbar__logo">
+          <a href="/index.html"><ion-icon name="home-outline"></ion-icon></a>
         </div>
-        <div class="navigation__search-bar" style="opacity: 0; visibility: hidden">
-            <input class="search-bar" type="text" placeholder="Search here">
-            <ion-icon name="search-outline" class="search-bar--icon"></ion-icon>
+        <div class="navbar__cart">
+          <a href="/checkout-page/checkout-page.html"><ion-icon name="cart-outline"></ion-icon></a>
         </div>
-        <div class="navigation__shopping-cart">
-            <a href="/checkout-page.html" class="link cart-link" >
-                <ion-icon name="cart-outline" class="cart-icon"></ion-icon>
-                <div class="container__products-in-cart hidden">
-                    <p class="products-in-cart">0</p>
-                </div>
+      </nav>  
+    </header>
+
+    <!-- product catalog -->
+    <main>
+
+      <section class="product__details">
+
+        <div class="product__details-carousel">
+          <div class="product__details-images-small">
+            <div class="product__details-images-small--slide-0">
+              <img src="/img/product-woman-denim-jacket.svg" alt="" class="carousel-slides slide-0">
+            </div>
+            <div class="product__details-images-small--slide-0">
+              <img src="/img/product-woman-denim-jacket.svg" alt="" class="carousel-slides slide-0">
+            </div>
+            <div class="product__details-images-small--slide-0">
+              <img src="/img/product-woman-denim-jacket.svg" alt="" class="carousel-slides slide-0">
+            </div>
+            <div class="product__details-images-small--slide-0">
+              <img src="/img/product-woman-denim-jacket.svg" alt="" class="carousel-slides slide-0">
+            </div>
+            <div class="product__details-images-small--slide-0">
+              <img src="/img/product-woman-denim-jacket.svg" alt="" class="carousel-slides slide-0">
+            </div>
+          </div>
+          <div class="product__details-image-large"> 
+            <img src = "/img/product-woman-denim-jacket.svg" alt="dress orange"/>
+          </div>
+        </div>
+
+        <div class="product__details-full">
+
+          <div class="product__details-container">
+            <div class="product__details-full-title">
+              <h2>FREE FIRE T Shirt</h2>
+            </div>
+            <div class="product__details-category">brand:</div>
+            <div class="product__details-category">category:</div>
+            <div class="product__details-category">seller:</div>
+            <div class="product__details-category">description:</div>
+            <div class="product__details-category">stock:</div>
+            <div class="product__details-category">rating:</div>
+            <div class="product__details-category">price:</div>
+            <button class="button__add-to-cart">Add to cart</button>
+
+          </div>          
+          
+        </div>
+
+      </section>
+
+      <section class="product__similar">
+
+        <div class="product__similar-title">
+          <h3>Similar Products</h3>
+        </div>
+
+        <div class="product__similar-container">
+
+          <div class="product__similar-card">
+            <a href="/product-details/product-details.html" class="product__details-link">
+              <div class="product__image"> 
+                <img src = "/img/product-woman-dress-orange.svg" alt="dress orange"/>
+              </div>
+              <div class="product__details-container">
+                <div class="product__details-title">Similar product title</div>
+                <div class="product__details-category">brand:</div>
+                <div class="product__details-category">rating:</div>
+                <div class="product__details-category">price:</div>
+              </div>
             </a>
+          </div>
+
+          <div class="product__similar-card">
+            <a href="/product-details/product-details.html" class="product__details-link">
+              <div class="product__image"> 
+                <img src = "/img/product-woman-dress-orange.svg" alt="dress orange"/>
+              </div>
+              <div class="product__details-container">
+                <div class="product__details-title">Similar product title</div>
+                <div class="product__details-category">brand:</div>
+                <div class="product__details-category">rating:</div>
+                <div class="product__details-category">price:</div>
+              </div>
+            </a>
+          </div>
+
+          <div class="product__similar-card">
+            <a href="/product-details/product-details.html" class="product__details-link">
+              <div class="product__image"> 
+                <img src = "/img/product-woman-dress-orange.svg" alt="dress orange"/>
+              </div>
+              <div class="product__details-container">
+                <div class="product__details-title">Similar product title</div>
+                <div class="product__details-category">brand:</div>
+                <div class="product__details-category">rating:</div>
+                <div class="product__details-category">price:</div>
+              </div>
+            </a>
+          </div>
+
+          <div class="product__similar-card">
+            <a href="/product-details/product-details.html" class="product__details-link">
+              <div class="product__image"> 
+                <img src = "/img/product-woman-dress-orange.svg" alt="dress orange"/>
+              </div>
+              <div class="product__details-container">
+                <div class="product__details-title">Similar product title</div>
+                <div class="product__details-category">brand:</div>
+                <div class="product__details-category">rating:</div>
+                <div class="product__details-category">price:</div>
+              </div>
+            </a>
+          </div>
+          
         </div>
-    </nav>
-</header>
 
+      </section>
+    </main>
 
-<section class="section__product-details">
-
-</section>
-
-<section class="section__similar-products">
-    <h1>Similar Products</h1>
-
-</section>
-
-<footer class="footer__container">
-    <p class="link">Terms & Conditions</p>
-    <p class="link">Privacy Policy</p>
-    <div class="social-links__container">
-        <ion-icon name="logo-facebook" class="footer-icon-logo icon-facebook"></ion-icon>
-        <ion-icon name="logo-instagram" class="footer-icon-logo icon-instagram"></ion-icon>
-        <ion-icon name="logo-whatsapp" class="footer-icon-logo icon-whatsapp"></ion-icon>
-        <ion-icon name="logo-twitter" class="footer-icon-logo icon-twitter"></ion-icon>
+    <footer>
+      <p class="terms">Terms & Conditions</p>
+      <p class="terms">Privacy Policy</p>
+      <div class="social">
+        <p class="social-icon"><ion-icon name="logo-facebook"></ion-icon></p>
+        <p class="social-icon"><ion-icon name="logo-instagram"></ion-icon></p>
+        <p class="social-icon"><ion-icon name="logo-whatsapp"></ion-icon></p>
+        <p class="social-icon"><ion-icon name="logo-twitter"></ion-icon></p>
     </div>
-</footer>
+    </footer>
 
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-</body>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  </body>
 </html>

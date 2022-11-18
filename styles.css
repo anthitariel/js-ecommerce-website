@@ -158,17 +158,22 @@ body {
   z-index: 3;
 }
 
-.product__button {
-  display: block;
+.button__add-to-cart {
   text-align: center;
   cursor: pointer;
-  width: 100%;
-  padding: 1rem 0;
+  padding: 1rem 2rem;
   background-color: rgb(2, 80, 196);
   color: #fff;
   border: none;
   font-family: inherit;
   font-size: 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.button__add-to-cart--full {
+  width: 100%;
+  border-radius: 0;
   transition: transform 0.3s ease-in-out, background-color 0.2s;
 }
 
