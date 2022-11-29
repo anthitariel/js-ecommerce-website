@@ -13,12 +13,13 @@ header {
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 2rem 0 2rem;
 }
 
 .navbar__search {
   position: relative;
-  max-width: 45rem;
+  max-width: 30rem;
   width: 100%;
 }
 
@@ -29,10 +30,6 @@ header {
   padding: 0.6rem 1.5rem;
   width: 100%;
   outline: none;
-}
-
-.navbar__search:hover {
-  outline: auto;
 }
 
 /* clears the ‘X’ from Internet Explorer */
@@ -101,11 +98,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 21rem;
+  width: 18rem;
   height: 32rem;
   background-color: #fff;
-  box-shadow: 0 7px 10px 5px rgb(0 0 0 / 20%);
-  border-radius: 5px;
+  box-shadow: 0rem 0.5rem 1rem 0.5rem rgb(0 0 0 / 20%);
+  border-radius: 0.3rem;
   overflow: hidden;
   cursor: default;
 }
@@ -202,4 +199,32 @@ footer {
   cursor: pointer;
 }
 
+/*------------------------------------*\
+  #RESPONSIVE
+\*------------------------------------*/
 
+@media (max-width: 1536px)  {
+  .product__catalog {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1136px) {
+  .product__sort {
+    padding-right: 0;
+  }
+  
+  .product__catalog {
+    grid-template-columns: repeat(2, 1fr);
+  }         
+}
+
+@media (max-width: 624px) {
+  .product__catalog {
+    grid-template-columns: 1fr;
+  }    
+  
+  .navbar__search {
+    max-width: 15rem;
+  }
+}

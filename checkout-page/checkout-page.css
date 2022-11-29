@@ -13,7 +13,8 @@
   .navbar {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 2rem 0 2rem;
   }
    
   /*------------------------------------*\
