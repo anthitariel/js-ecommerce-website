@@ -170,22 +170,27 @@ header {
  }
  
  .button__add-to-cart {
+  display: none;
   text-align: center;
   cursor: pointer;
   padding: 1rem 2rem;
-  background-color: rgb(2, 80, 196);
+  background-color: #0250c4;
   color: #fff;
   border: none;
   font-family: inherit;
   font-size: 1rem;
-  border-radius: 0.5rem;
   transition: background-color 0.2s ease-in-out;
- }
- 
- .button__add-to-cart--full {
   width: 100%;
   border-radius: 0;
   transition: transform 0.3s ease-in-out, background-color 0.2s;
+ }
+
+ .product__details-link:hover + button, .button__add-to-cart:hover {
+  display: inline-block;
+ }
+
+ .button__add-to-cart:hover {
+  background-color: #0343a3;
  }
  
  .product__details-container {

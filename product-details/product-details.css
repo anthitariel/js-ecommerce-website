@@ -199,7 +199,7 @@ body {
   margin-bottom: 2rem;
 }
 
-.button__add-to-cart {
+.button__add-to-cart--small {
   text-align: center;
   cursor: pointer;
   padding: 0.5rem 1rem;
@@ -212,7 +212,7 @@ body {
   transition: background-color 0.2s ease-in-out;
 }
 
-.button__add-to-cart:hover {
+.button__add-to-cart--small:hover {
   background-color: #0343a3;
 }
 

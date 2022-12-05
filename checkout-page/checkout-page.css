@@ -97,67 +97,67 @@ body {
 }
 
 .product__price {
-font-family: sans-serif;
-text-transform: uppercase;
-font-size: 0.8rem;
-margin-right: 0.3rem;
-opacity: 0.7;
-gap: 2rem;
-margin-bottom: 0.8rem;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-right: 0.3rem;
+  opacity: 0.7;
+  gap: 2rem;
+  margin-bottom: 0.8rem;
 }
 
 .product__price-after-discount {
-display: inline-block;
-padding-right: 1rem;
+  display: inline-block;
+  padding-right: 1rem;
 }
 
 .product__price-before-discount {
-display: inline-block;
-text-decoration: line-through;
-opacity: 0.7;
-padding-right: 1rem;
+  display: inline-block;
+  text-decoration: line-through;
+  opacity: 0.7;
+  padding-right: 1rem;
 }
 
 .product__price-discount {
-color: #0A8200;
-display: inline-block;
+  color: #0A8200;
+  display: inline-block;
 }
 
 .checkout__remove-from-cart {
-display: flex;
-align-items: center;
-padding-bottom: 1rem;
-gap: 1rem;
+  display: flex;
+  align-items: center;
+  padding-bottom: 1rem;
+  gap: 1rem;
 }
 
 .checkout__total-price {
-display: flex;
-justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .total-text,
 .total-price {
-font-size: 1rem;
+  font-size: 1rem;
 }
 
 .checkout__total-button {
-display: flex;
-justify-content: flex-end;
-padding-bottom: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 2rem;
 }
 
 .button__go-to-payment {
-padding: 0.5rem 1rem;
-text-align: center;
-background-color: #0250c4;
-border: none;
-color: #fff;
-border-radius: 0.3rem;
-cursor: pointer;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  background-color: #0250c4;
+  border: none;
+  color: #fff;
+  border-radius: 0.3rem;
+  cursor: pointer;
 }
 
 .button__go-to-payment:hover {
-background-color: #0343a3;
+  background-color: #0343a3;
 }
 
 /*------------------------------------*\
@@ -165,29 +165,29 @@ background-color: #0343a3;
 \*------------------------------------*/
 
 .footer__checkout {
-position: absolute;
-bottom: 0;
-left: 0;
-width: 100%;
-display: flex;
-background-color: #223263;
-color: #fff;
-justify-content: space-around;
-align-items: center;
-padding: 0.5rem 1rem;
-cursor: default;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  background-color: #223263;
+  color: #fff;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  cursor: default;
 }
 
 .terms {
-cursor: pointer;
-text-decoration: none;
-color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
 }
 
 .social {
-display: flex;
-gap: 0.8rem;
-font-size: 1.2rem;
-cursor: pointer;
+  display: flex;
+  gap: 0.8rem;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
