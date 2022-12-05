@@ -121,7 +121,10 @@ body {
   margin: 1.2rem 0;
 }
 
-.product__details-category {
+.product__details-category, 
+.product__details-brand,
+.product__details-price,
+.product__details-seller {
   font-family: sans-serif;
   text-transform: uppercase;
   font-weight: 700;
@@ -150,6 +153,12 @@ body {
   color: #FFF;
   background-color: #333;
   z-index: 3;
+}
+
+.product__image-full {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .button__add-to-cart {
