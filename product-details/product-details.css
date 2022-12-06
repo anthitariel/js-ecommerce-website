@@ -52,21 +52,18 @@ body {
   height: 30rem;
 }
 
-.product__details-image-container {
-  width: 7rem;
+.product__details-images-small * {
+  max-width: 10rem;
   height: 7rem;
 }
 
-.product__details-slides {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.carousel-slides {
   padding: 0.3rem;
   background-color: #fff;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   box-shadow: 0rem 0.5rem 1rem 0.5rem rgb(0 0 0 / 20%);
-  border-radius: 0.5rem;  
+  border-radius: 0.5rem;
 }
 
 .selected-slide {
@@ -89,7 +86,7 @@ body {
 .product__details-image-large .carousel-slide-large {
   width: 100%;
   height: 100%;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   object-fit: cover;
 }
 
@@ -99,9 +96,10 @@ body {
   padding: 6rem 0;
 }
 
-.product__similar-title {
-  margin-bottom: 2rem;
-  font-size: 1.2rem;
+.product__similar-title h3 {
+  display: block;
+  font-size: 2 rem;
+  font-weight: bold;
 }
 
 .product__similar-container {
@@ -114,13 +112,13 @@ body {
   background-color: #fff;
   border-radius: 0.3rem;
   overflow: hidden;
-  width: 18rem;
+  width: 19rem;
   height: 26rem;
   box-shadow: 0rem 0.5rem 1rem 0.5rem rgb(0 0 0 / 20%);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.product__details-link {
+.product__similar-card-link {
   text-decoration: none;
   color: inherit;
 }
@@ -131,16 +129,15 @@ body {
   margin: 1.2rem 0;
 }
 
-.product__details-brand,
-.product__details-category, 
-.product__details-seller,
-.product__details-description,
-.product__details-stock,
-.product__details-rating,
-.product__details-price {
+.product__brand,
+.product__rating,
+.product__price,
+.product__category,
+.product__seller,
+.product__description,
+.product__stock {
   font-family: sans-serif;
   text-transform: uppercase;
-  font-weight: 700;
   font-size: 0.8rem;
   margin-right: 0.3rem;
   opacity: 0.7;
@@ -148,12 +145,40 @@ body {
   margin-bottom: 0.8rem;
 }
 
-.product__image {
+.product__details-brand *,
+.product__details-category *,
+.product__details-seller *,
+.product__details-description *,
+.product__details-stock *,
+.product__details-rating *,
+.product__details-price * {
+  display: inline-block;
+}
+
+.product__price-after-discount {
+  padding-right: 1rem;
+}
+
+.product__price-before-discount {
+  text-decoration: line-through;
+  opacity: 0.7;
+  padding-right: 1rem;
+}
+
+.product__price-discount {
+  color: #0A8200;
+}
+
+.product__similar-card-image {
   overflow: hidden;
   height: 13rem;
 }
 
-.product__image::before{
+.product__similar-card-details {
+  padding: 1rem;
+}
+
+.product__similar-card-image::before{
   position: absolute;
   top: 50%;
   font-family: sans-serif;
@@ -168,37 +193,27 @@ body {
   z-index: 3;
 }
 
-.product__button {
-  display: block;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  padding: 1rem 0;
-  background-color: rgb(2, 80, 196);
-  color: #fff;
-  border: none;
-  font-family: inherit;
-  font-size: 1rem;
-  transition: transform 0.3s ease-in-out, background-color 0.2s;
-}
-
 .product__details-full-title h2 {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 2rem;
 }
 
-.button__add-to-cart {
+.button__add-to-cart--small {
   text-align: center;
   cursor: pointer;
-  padding: 1rem 2rem;
-  background-color: rgb(2, 80, 196);
+  padding: 0.5rem 1rem;
+  background-color: #0250c4;
   color: #fff;
   border: none;
   font-family: inherit;
   font-size: 1rem;
-  border-radius: 0.5rem;
+  border-radius: 0.3rem;
   transition: background-color 0.2s ease-in-out;
+}
+
+.button__add-to-cart--small:hover {
+  background-color: #0343a3;
 }
 
 /*------------------------------------*\
@@ -227,7 +242,6 @@ footer {
   font-size: 1.2rem;
   cursor: pointer;
 }
-
 /*------------------------------------*\
   #RESPONSIVE
 \*------------------------------------*/
@@ -265,16 +279,15 @@ footer {
 @media (max-width: 1136px) {
   .product__catalog {
     grid-template-columns: repeat(2, 1fr);
-  }         
+  }
 }
 
 @media (max-width: 624px) {
   .product__catalog {
     grid-template-columns: 1fr;
-  }    
-  
+  }
+
   .navbar__search {
     max-width: 15rem;
   }
 }
-
