@@ -1,5 +1,5 @@
 /*------------------------------------*\
-  #HEADER
+ #HEADER
 \*------------------------------------*/
 
 header {
@@ -8,57 +8,54 @@ header {
   padding: 1.2rem 0.5rem;
   background-color: #fff;
   z-index: 9999;
-}
-
-.navbar {
+ }
+ 
+ .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-}
-
-.navbar__search {
+  justify-content: space-between;
+  padding: 0 2rem 0 2rem;
+ }
+ 
+ .navbar__search {
   position: relative;
-  max-width: 45rem;
+  max-width: 30rem;
   width: 100%;
-}
-
-.navbar__search-input {
+ }
+ 
+ .navbar__search-input {
   border: none;
   border-radius: 0.3rem;
   background-color: #F0F0F0;
   padding: 0.6rem 1.5rem;
   width: 100%;
   outline: none;
-}
-
-.navbar__search:hover {
-  outline: auto;
-}
-
-/* clears the ‘X’ from Internet Explorer */
-input[type=search]::-ms-clear { display: none; width : 0; height: 0; }
-input[type=search]::-ms-reveal { display: none; width : 0; height: 0; }
-
-/* clears the ‘X’ from Chrome */
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration { display: none; }
-
-.navbar__search-icon {
+ }
+ 
+ /* clears the ‘X’ from Internet Explorer */
+ input[type=search]::-ms-clear { display: none; width : 0; height: 0; }
+ input[type=search]::-ms-reveal { display: none; width : 0; height: 0; }
+ 
+ /* clears the ‘X’ from Chrome */
+ input[type="search"]::-webkit-search-decoration,
+ input[type="search"]::-webkit-search-cancel-button,
+ input[type="search"]::-webkit-search-results-button,
+ input[type="search"]::-webkit-search-results-decoration { display: none; }
+ 
+ .navbar__search-icon {
   position: absolute;
   top: 0.5rem;
   right: 1rem;
   background-color: transparent;
   font-size: 1.25rem;
   cursor: pointer;
-}
-
-/*------------------------------------*\
+ }
+ 
+ /*------------------------------------*\
   #BODY
-\*------------------------------------*/
-
-body {
+ \*------------------------------------*/
+ 
+ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -66,26 +63,26 @@ body {
   font-size: 0.8rem;
   background-color: #F5F5F5;
   overflow-x: hidden;
-}
-
-.product__sort {
+ }
+ 
+ .product__sort {
   max-width: 95%;
   margin: 0 auto;
   padding: 6rem 0 2rem 0;
   display: flex;
   justify-content: flex-end;
   padding-right: 5rem;
-}
-
-.product__sort-by {
+ }
+ 
+ .product__sort-by {
   font-family: inherit;
   font-size: inherit;
   outline: none;
   border: none;
   background-color: transparent;
-}
-
-.product__catalog {
+ }
+ 
+ .product__catalog {
   max-width: 95%;
   margin: 0 auto;
   display: grid;
@@ -94,34 +91,37 @@ body {
   grid-template-columns: repeat(4, 1fr);
   row-gap: 4rem;
   padding-bottom: 5rem;
-}
-
-.product {
+ }
+ 
+ .product {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 21rem;
-  height: 32rem;
+  width: 22rem;
+  height: 34rem;
   background-color: #fff;
-  box-shadow: 0 7px 10px 5px rgb(0 0 0 / 20%);
-  border-radius: 5px;
+  box-shadow: 0rem 0.5rem 1rem 0.5rem rgb(0 0 0 / 20%);
+  border-radius: 0.6rem;
   overflow: hidden;
   cursor: default;
-}
-
-.product__details-link {
+ }
+ 
+ .product__details-link {
   text-decoration: none;
   color: inherit;
-}
-
-.product__details-title {
+ }
+ 
+ .product__details-title {
   font-size: 1rem;
   font-weight: bold;
   margin: 1.2rem 0;
-}
-
-.product__details-category {
+ }
+ 
+ .product__category,
+ .product__brand,
+ .product__price,
+ .product__seller {
   font-family: sans-serif;
   text-transform: uppercase;
   font-weight: 700;
@@ -130,16 +130,33 @@ body {
   opacity: 0.7;
   gap: 2rem;
   margin-bottom: 0.8rem;
-}
-
-.product__image {
+ }
+ 
+ .product__price-after-discount {
+  display: inline-block;
+  padding-right: 1rem;
+ }
+ 
+ .product__price-before-discount {
+  display: inline-block;
+  text-decoration: line-through;
+  opacity: 0.7;
+  padding-right: 1rem;
+ }
+ 
+ .product__price-discount {
+  color: #0A8200;
+  display: inline-block;
+ }
+ 
+ .product__image {
   overflow: hidden;
   height: 16rem;
-}
-
-.product__image::before{
+ }
+ 
+ .product__image::before{
   position: absolute;
-  top: 50%;
+  top: 45%;
   font-family: sans-serif;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -150,36 +167,41 @@ body {
   color: #FFF;
   background-color: #333;
   z-index: 3;
-}
-
-.button__add-to-cart {
+ }
+ 
+ .button__add-to-cart {
+  display: none;
   text-align: center;
   cursor: pointer;
   padding: 1rem 2rem;
-  background-color: rgb(2, 80, 196);
+  background-color: #0250c4;
   color: #fff;
   border: none;
   font-family: inherit;
   font-size: 1rem;
-  border-radius: 0.5rem;
   transition: background-color 0.2s ease-in-out;
-}
-
-.button__add-to-cart--full {
   width: 100%;
   border-radius: 0;
   transition: transform 0.3s ease-in-out, background-color 0.2s;
-}
+ }
 
-.product__details-container {
+ .product__details-link:hover + button, .button__add-to-cart:hover {
+  display: inline-block;
+ }
+
+ .button__add-to-cart:hover {
+  background-color: #0343a3;
+ }
+ 
+ .product__details-container {
   padding: 1.2rem 1.8rem;
-}
-
-/*------------------------------------*\
+ }
+ 
+ /*------------------------------------*\
   #FOOTER
-\*------------------------------------*/
-
-footer {
+ \*------------------------------------*/
+ 
+ footer {
   display: flex;
   background-color: #223263;
   color: #fff;
@@ -187,19 +209,47 @@ footer {
   align-items: center;
   padding: 1rem;
   cursor: default;
-}
-
-.terms {
+ }
+ 
+ .terms {
   cursor: pointer;
   text-decoration: none;
   color: inherit;
-}
-
-.social {
+ }
+ 
+ .social {
   display: flex;
   gap: 0.8rem;
   font-size: 1.2rem;
   cursor: pointer;
-}
-
-
+ }
+ 
+ /*------------------------------------*\
+  #RESPONSIVE
+ \*------------------------------------*/
+ 
+ @media (max-width: 1536px)  {
+  .product__catalog {
+    grid-template-columns: repeat(3, 1fr);
+  }
+ }
+ 
+ @media (max-width: 1136px) {
+  .product__sort {
+    padding-right: 0;
+  }
+  
+  .product__catalog {
+    grid-template-columns: repeat(2, 1fr);
+  }         
+ }
+ 
+ @media (max-width: 624px) {
+  .product__catalog {
+    grid-template-columns: 1fr;
+  }    
+  
+  .navbar__search {
+    max-width: 15rem;
+  }
+ }

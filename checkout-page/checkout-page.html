@@ -9,15 +9,14 @@
   </head>
 
   <body>
-    <!-- top menu navigation -->
 
     <header>
       <nav class="navbar">
         <div class="navbar__logo">
-          <a href="/index.html"><ion-icon name="home-outline"></ion-icon></a>
+          <a href="../index.html"><ion-icon name="home-outline"></ion-icon></a>
         </div>
         <div class="navbar__cart">
-          <a href="/checkout-page/checkout-page.html"><ion-icon name="cart-outline"></ion-icon></a>
+          <a href="checkout-page.html"><ion-icon name="cart-outline"></ion-icon></a>
         </div>
       </nav>  
     </header>
@@ -27,18 +26,35 @@
       <section class="checkout">
 
         <div class="checkout__form">
-  
           <div class="checkout__form-container">
-            <div class="checkout__form-image-container">
-              <img src="/img/checkout-image-empty.svg" alt="checkout-image" class="checkout__form-image">
+            <div class="checkout__items">
+              <div class="checkout__form-image-container">
+                <img src="../img/checkout-image-empty.svg" alt="checkout-image" class="checkout__form-image">
+              </div>
+              <div class="checkout__form-text">
+                <div class="product__details-title">Beautiful Orange Dress</div>
+                <div class="product__details-price">
+                  <p class="product__price">price:</p>
+                  <p class="product__price-after-discount"><strong>38.75 $</strong></p>
+                  <p class="product__price-before-discount">47 $</p>
+                  <p class="product__price-discount">(17.55% off)</p>
+                </div>
+                <div class="checkout__remove-from-cart">
+                  <ion-icon name="trash-outline"></ion-icon>
+                  <input type="number" min="1" max="89" data-base-price="38.7515" value="1" class="trash-quantity">
+                </div>
+              </div>
             </div>
-            <div class="checkout__form-text">
-              <p>title</p>
-              <p>price</p>
-              <ion-icon name="trash-outline"></ion-icon>
+            <div class="checkout__total">
+              <div class="checkout__total-price">
+                <p class="total-text">Total</p>
+                <p class="total-price" data-total-price="38.7515">38.75$</p>
+              </div>
+              <div class="checkout__total-button">
+                <button class="button__go-to-payment">Go to payment</button>
+              </div>
             </div>
           </div>
-
         </div>
 
       </section>
