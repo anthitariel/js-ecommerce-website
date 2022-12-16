@@ -62,7 +62,12 @@ body {
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   box-shadow: 0rem 0.5rem 1rem 0.5rem #00000033;
+}
 
+.carousel-slide-small:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0.5rem 1rem 1rem rgba(0, 0, 0, 0.2);
+  z-index: 100;
 }
 
 .product__details-carousel-large {
@@ -260,7 +265,7 @@ footer {
   }
 
   .product__details-slide-small {
-    max-width: 5rem;
+    width: 5rem;
     height: 5rem;
   }
 
