@@ -63,6 +63,43 @@ header {
   font-size: 1.25rem;
   cursor: pointer;
  }
+
+ .navbar__icon-image {
+    height: 2rem;
+    width: 2rem;
+    font-size: 1rem;
+    margin-right: 1rem;
+    color: #333;
+}
+
+ .icon__add-to-cart::before {
+  position: absolute;
+  /* content: "0"; */
+  content: attr(data-count);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0.7rem;
+  right: 2.2rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  font-weight: 800;
+  background-color: #F84F31;
+  color: #fff;
+  border-radius: 50%;
+  padding: 0.4rem;
+  font-size: 1rem;
+  font-family: sans-serif;
+  opacity: 0;
+ }
+
+ .icon__add-to-cart.on::before{
+  opacity: 1;
+ }
+
+ .text__add-to-cart {
+  text-shadow: 0 0 0.5rem #000000;
+ }
  
  /*------------------------------------*\
   #BODY
