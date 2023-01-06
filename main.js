@@ -57,5 +57,27 @@ function sortList() {
 
   sortList()
 
-   
+
+function addToCart() {
+
+	let cart = document.querySelector(".icon__add-to-cart")
+	let addToCartBtn = document.getElementsByClassName("button__add-to-cart")
+
+  	for(let btn of addToCartBtn) {
+		btn.onclick = e=> {
+			let item = Number(cart.getAttribute('data-count') || 0);
+			cart.setAttribute('data-count', item + 1)
+			cart.classList.add('on')
+			console.log('1')
+		}
+	}
+}
+
+addToCart()
+
+
+
+
+
+
 
