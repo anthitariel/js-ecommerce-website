@@ -55,7 +55,7 @@ function sortList() {
   	});
   }
 
-  sortList()
+sortList()
 
 
 function addToCart() {
@@ -75,9 +75,28 @@ function addToCart() {
 
 addToCart()
 
+// Search on the homepage
 
+let searchContent = document.querySelectorAll(".product");
+let searchInput = document.getElementById("searchInput");
+let searchButton = document.getElementById("searchButton");
+//let productCatalog = document.querySelector('.product__catalog');
 
+searchInput.addEventListener("keyup", runForEach);
+searchButton.addEventListener('click', runForEach)
 
+function runForEach() {
+	return searchContent.forEach(searchProduct);
+}
 
-
+function searchProduct(item) {
+  let getInput = searchInput.value;
+  let lowerCaseInput = getInput.toLowerCase();
+  let lowerCaseText = item.innerHTML.toLowerCase();
+  if (lowerCaseText.includes(lowerCaseInput)) {
+    return (item.style.display = "");
+  } else {
+    return (item.style.display = "none");
+  }
+}
 

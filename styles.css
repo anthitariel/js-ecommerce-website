@@ -100,6 +100,16 @@ header {
  .text__add-to-cart {
   text-shadow: 0 0 0.5rem #000000;
  }
+
+ .search__not-found-text {
+  display: grid;
+  color: red;
+  width: 100%;
+  text-align: center;
+  grid-column: 1/-1;
+  opacity: 0.5;
+  transform: translateY(1px);
+ }
  
  /*------------------------------------*\
   #BODY
