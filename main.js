@@ -80,23 +80,22 @@ addToCart()
 let searchContent = document.querySelectorAll(".product");
 let searchInput = document.getElementById("searchInput");
 let searchButton = document.getElementById("searchButton");
-//let productCatalog = document.querySelector('.product__catalog');
 
 searchInput.addEventListener("keyup", runForEach);
 searchButton.addEventListener('click', runForEach)
 
 function runForEach() {
-	return searchContent.forEach(searchProduct);
+let getInput = searchInput.value.toLowerCase().trim();
+searchContent.forEach(item => {
+let lowerCaseText = item.innerText.toLowerCase();
+if (lowerCaseText.includes(getInput)) {
+item.style.display = "";
+} else {
+item.style.display = "none";
 }
-
-function searchProduct(item) {
-  let getInput = searchInput.value;
-  let lowerCaseInput = getInput.toLowerCase();
-  let lowerCaseText = item.innerHTML.toLowerCase();
-  if (lowerCaseText.includes(lowerCaseInput)) {
-    return (item.style.display = "");
-  } else {
-    return (item.style.display = "none");
-  }
+}
+);
+let productCatalog = document.querySelector('.product__catalog');
+productCatalog.insertAdjacentHTML('beforeend',`<h1>No matching product found for: ${searchInput.value}</h1>`)
 }
 
