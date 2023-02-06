@@ -87,7 +87,7 @@ searchInput.addEventListener("input", function (e) {
   let isResult = false;
   const input = e.target;
   if (input.value) {
-    const toMatch = input.value.toLowerCase();
+    const toMatch = input.value.toLowerCase().trim();
     for (let i = 0; i < items.length; i++) {
       const match = items[i].innerHTML.toLowerCase().includes(toMatch);
       items[i].style.display = match ? "block" : "none";
