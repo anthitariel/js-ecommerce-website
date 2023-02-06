@@ -77,25 +77,37 @@ addToCart()
 
 // Search on the homepage
 
-let searchContent = document.querySelectorAll(".product");
+//  get the input by id and all product list items 
 let searchInput = document.getElementById("searchInput");
-let searchButton = document.getElementById("searchButton");
+let items = document.querySelectorAll(".product");
 
-searchInput.addEventListener("keyup", runForEach);
-searchButton.addEventListener('click', runForEach)
+// add an event handler to the input field
+searchInput.addEventListener("input", function (e) {
+  showResult(false);
+  let isResult = false;
+  const input = e.target;
+  if (input.value) {
+    const toMatch = input.value.toLowerCase();
+    for (let i = 0; i < items.length; i++) {
+      const match = items[i].innerHTML.toLowerCase().includes(toMatch);
+      items[i].style.display = match ? "block" : "none";
+      if (match) isResult = true;
+    }
+	//  show results
+    if (!isResult) showResult(true)
+  } else clear();
+});
 
-function runForEach() {
-let getInput = searchInput.value.toLowerCase().trim();
-searchContent.forEach(item => {
-let lowerCaseText = item.innerText.toLowerCase();
-if (lowerCaseText.includes(getInput)) {
-item.style.display = "";
-} else {
-item.style.display = "none";
+// clear any previous results from the page and looping through the search results list
+function clearList() {
+     for (let i = 0; i < items.length; i++) items[i].style.display = "block";
 }
-}
-);
-let productCatalog = document.querySelector('.product__catalog');
-productCatalog.insertAdjacentHTML('beforeend',`<h1>No matching product found for: ${searchInput.value}</h1>`)
-}
+
+// receive a not found message with a search value 
+function showResult(item) {
+	let notFound = document.getElementById("no-result");
+  	notFound.style.display = item ? "block" : "none";
+	document.getElementById("search-value").innerHTML = searchInput.value;
+  	}
+showResult(false);
 
