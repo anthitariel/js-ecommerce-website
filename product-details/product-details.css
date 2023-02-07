@@ -64,6 +64,10 @@ body {
   width: 10rem;
 }
 
+.selected-slide {
+  transform: scale(1.2);
+}
+
 .product__details-slide-small {
   width: 7rem;
   height: 7rem;
