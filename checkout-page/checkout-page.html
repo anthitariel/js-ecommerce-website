@@ -3,45 +3,65 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
     <title>E-commerce website</title>
     <link rel="stylesheet" href="checkout-page.css" />
   </head>
 
   <body>
-
     <header>
       <nav class="navbar">
         <div class="navbar__logo">
-          <a href="../index.html"><ion-icon name="home-outline"></ion-icon></a>
+          <a href="../index.html">
+            <ion-icon class="navbar__icon-image" name="home-outline"></ion-icon>
+          </a>
         </div>
         <div class="navbar__cart">
-          <a href="checkout-page.html"><ion-icon name="cart-outline"></ion-icon></a>
+          <a href="checkout-page.html">
+            <ion-icon class="navbar__icon-image" name="cart-outline"></ion-icon>
+          </a>
         </div>
-      </nav>  
+      </nav>
     </header>
 
     <main>
-
       <section class="checkout">
-
         <div class="checkout__form">
           <div class="checkout__form-container">
             <div class="checkout__items">
               <div class="checkout__form-image-container">
-                <img src="../img/checkout-image-empty.svg" alt="checkout-image" class="checkout__form-image">
+                <img
+                  src="../img/checkout-image-empty.svg"
+                  alt="checkout-image"
+                  class="checkout__form-image"
+                />
               </div>
               <div class="checkout__form-text">
                 <div class="product__details-title">Beautiful Orange Dress</div>
                 <div class="product__details-price">
                   <p class="product__price">price:</p>
-                  <p class="product__price-after-discount"><strong>38.75 $</strong></p>
+                  <p class="product__price-after-discount">
+                    <strong>38.75 $</strong>
+                  </p>
                   <p class="product__price-before-discount">47 $</p>
                   <p class="product__price-discount">(17.55% off)</p>
                 </div>
                 <div class="checkout__remove-from-cart">
-                  <ion-icon name="trash-outline"></ion-icon>
-                  <input type="number" min="1" max="89" data-base-price="38.7515" value="1" class="trash-quantity">
+                  <ion-icon
+                    class="checkout__remove-from-cart-icon"
+                    name="trash-outline"
+                  ></ion-icon>
+                  <input
+                    type="number"
+                    min="1"
+                    max="89"
+                    data-base-price="38.7515"
+                    value="1"
+                    class="trash-quantity"
+                  />
                 </div>
               </div>
             </div>
@@ -56,9 +76,7 @@
             </div>
           </div>
         </div>
-
       </section>
-
     </main>
 
     <footer class="footer__checkout">
@@ -69,12 +87,16 @@
         <p class="social-icon"><ion-icon name="logo-instagram"></ion-icon></p>
         <p class="social-icon"><ion-icon name="logo-whatsapp"></ion-icon></p>
         <p class="social-icon"><ion-icon name="logo-twitter"></ion-icon></p>
-    </div>
+      </div>
     </footer>
 
-
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>

@@ -1,15 +1,15 @@
 html {
   /* font-size for 1rem = 10px */
   font-size: 70%;
-  
-    @include respond(tab-land) {
+
+  @include respond(tab-land) {
     font-size: 50%;
-    }
-  
-    @include respond(tab-port) {
-    font-size: 40%;
-    }
   }
+
+  @include respond(tab-port) {
+    font-size: 40%;
+  }
+}
 
 /*------------------------------------*\
   #HEADER
@@ -29,7 +29,15 @@ header {
   justify-content: space-between;
   padding: 0 2rem 0 2rem;
 }
- 
+
+.navbar__icon-image {
+  height: 2rem;
+  width: 2rem;
+  font-size: 1rem;
+  margin-right: 1rem;
+  color: #333;
+}
+
 /*------------------------------------*\
   #BODY
 \*------------------------------------*/
@@ -40,14 +48,14 @@ body {
   box-sizing: border-box;
   font-family: "Libre Baskerville", sans-serif;
   font-size: 0.8rem;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   overflow-x: hidden;
 }
 
 .checkout__form {
   display: grid;
   align-items: center;
-  background-color: #FFF;
+  background-color: #fff;
   height: 70%;
   width: 35%;
   position: absolute;
@@ -81,7 +89,7 @@ body {
 .checkout__form-image-container {
   display: flex;
   align-items: center;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   margin-right: 2rem;
   max-width: 7rem;
   border-radius: 0.3rem;
@@ -98,6 +106,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.checkout__remove-from-cart-icon {
+  cursor: pointer;
+  color: #7a151f;
+  font-size: 2rem;
 }
 
 .product__details-title {
@@ -132,7 +146,7 @@ body {
 }
 
 .product__price-discount {
-  color: #0A8200;
+  color: #0a8200;
   display: inline-block;
 }
 
@@ -204,3 +218,22 @@ body {
   cursor: pointer;
 }
 
+/*------------------------------------*\
+  #RESPONSIVE
+\*------------------------------------*/
+
+@media (max-width: 1136px) {
+  .checkout__form {
+    width: 50%;
+  }
+}
+
+@media (max-width: 624px) {
+  .checkout__form {
+    width: 85%;
+  }
+
+  .button__go-to-payment {
+    min-width: 100%;
+}
+}
