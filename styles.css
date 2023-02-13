@@ -320,6 +320,14 @@ footer {
   .product__catalog {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .button__add-to-cart {
+    display: inline-block;
+  }
+
+  .button__add-to-cart {
+    background-color: #0343a3;
+  }
 }
 
 @media (max-width: 1136px) {
