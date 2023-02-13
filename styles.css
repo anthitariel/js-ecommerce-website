@@ -116,7 +116,7 @@ input[type="search"]::-webkit-search-results-decoration {
   text-align: center;
   grid-column: 1/-1;
   opacity: 0.5;
-  font-size: 1.5rem;
+  font-size: 120%;
 }
 
 /*------------------------------------*\
