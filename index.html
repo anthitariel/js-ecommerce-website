@@ -23,267 +23,48 @@
           <ion-icon id="searchButton" class="navbar__search-icon" name="search-outline"></ion-icon>
         </div>
         <div class="navbar__cart">
-          <a href="./checkout-page/checkout-page.html">
+          <a href="./checkout-page/checkout-page.html" class="link navbar__cart-link">
             <ion-icon class="navbar__icon-image" name="cart-outline"></ion-icon>
-            <div class="icon__add-to-cart"></div>
+            <div class="navbar__products-in-cart count__hidden">
+              <p class="count__products-in-cart">0</p>
+            </div>
           </a>
         </div>
-      </nav>  
+      </nav>
     </header>
+    
+  <!-- product catalog -->
+  <main>
 
-    <!-- product catalog -->
-    <main>
+  <section class="product__sort">
+      <form>
+          <label for="sort-by">Sort By:
+            <select name="sort-by" class="product__sort-by" id="sort-by-price">
+                <option value="Ascending">Ascending Price</option>
+                <option value="Descending">Descending Price</option>
+            </select>
+            </label>
+      </form>
+  </section>
+    
+  <section class="product__catalog"></section>
 
-      <section class="product__sort">
-        <form>
-            <label for="sort-by">Sort By:
-              <select name="sort-by" class="product__sort-by" id="sort-by-price">
-                  <option value="Ascending">Ascending Price</option>
-                  <option value="Descending">Descending Price</option>
-              </select>
-              </label>
-        </form>
-      </section>
+  </main>
 
-      <section class="product__catalog">
+  <footer>
+    <p class="terms">Terms & Conditions</p>
+    <p class="terms">Privacy Policy</p>
+    <div class="social">
+      <p class="social-icon"><ion-icon name="logo-facebook"></ion-icon></p>
+      <p class="social-icon"><ion-icon name="logo-instagram"></ion-icon></p>
+      <p class="social-icon"><ion-icon name="logo-whatsapp"></ion-icon></p>
+      <p class="social-icon"><ion-icon name="logo-twitter"></ion-icon></p>
+  </div>
+  </footer>
 
-        <div id="no-result" class="search__not-found-text">No matching product found for: 
-          <span id="search-value"></span>
-        </div>
-
-        <li value="600" class="product">
-          <a href="./product-details/product-details.html" class="product__details-link">
-            <div class="product__image"> 
-              <img src = "./img/product-women-rose-dress.svg" alt="dress orange"/>
-            </div>
-            <div class="product__details-container">
-              <div class="product__details-title">Beautiful Rose Dress</div>
-              <div class="product__details-category">
-                <p><span class="product__category">category:</span> Clothes</p>
-              </div>
-              <div class="product__details-brand">
-                <p><span class="product__brand">brand:</span>ADIDAS</p>
-              </div>
-              <div class="product__details-price">
-                <span class="product__price">price:</span>
-                <p class="product__price-after-discount"><strong>600 $</strong></p>
-                <p class="product__price-before-discount">600 $</p>
-                <p class="product__price-discount">(60% off)</p>
-              </div>
-              <div class="product__details-seller">
-                <p><span class="product__seller">seller:</span> Amazon</p>
-              </div>
-            </div>
-          </a>
-            <button class="button__add-to-cart">Add to cart</button>
-        </li>
-
-        <li value="300" class="product">
-          <a href="./product-details/product-details.html" class="product__details-link">
-            <div class="product__image"> 
-              <img src = "./img/product-woman-dress-orange.svg" alt="dress orange"/>
-            </div>
-            <div class="product__details-container">
-              <div class="product__details-title">Amazing Black Dress</div>
-              <div class="product__details-category">
-                <p><span class="product__category">category:</span> Clothes</p>
-              </div>
-              <div class="product__details-brand">
-                <p><span class="product__brand">brand:</span> Nike</p>
-              </div>
-              <div class="product__details-price">
-                <span class="product__price">price:</span>
-                <p class="product__price-after-discount"><strong>300 $</strong></p>
-                <p class="product__price-before-discount">300 $</p>
-                <p class="product__price-discount">(30% off)</p>
-              </div>
-              <div class="product__details-seller">
-                <p><span class="product__seller">seller:</span>Google</p>
-              </div>
-            </div>
-          </a>
-            <button class="button__add-to-cart">Add to cart</button>
-        </li>
-
-        <li value="400" class="product">
-          <a href="./product-details/product-details.html" class="product__details-link">
-            <div class="product__image"> 
-              <img src = "./img/product-woman-red-dress.svg" alt="dress red"/>
-            </div>
-            <div class="product__details-container">
-              <div class="product__details-title">Beautiful Blue Dress</div>
-              <div class="product__details-category">
-                <p><span class="product__category">category:</span> Clothes</p>
-              </div>
-              <div class="product__details-brand">
-                <p><span class="product__brand">brand:</span> Nike</p>
-              </div>
-              <div class="product__details-price">
-                <span class="product__price">price:</span>
-                <p class="product__price-after-discount"><strong>400 $</strong></p>
-                <p class="product__price-before-discount">400 $</p>
-                <p class="product__price-discount">(40% off)</p>
-              </div>
-              <div class="product__details-seller">
-                <p><span class="product__seller">seller:</span> Amazon</p>
-              </div>
-            </div>
-          </a>
-            <button class="button__add-to-cart">Add to cart</button>
-        </li>
-
-        <li value="500" class="product">
-          <a href="./product-details/product-details.html" class="product__details-link">
-            <div class="product__image"> 
-              <img src = "./img/product-woman-denim-jacket.svg" alt="denim"/>
-            </div>
-            <div class="product__details-container">
-              <div class="product__details-title">Beautiful Rose Dress</div>
-              <div class="product__details-category">
-                <p><span class="product__category">category:</span> Clothes</p>
-              </div>
-              <div class="product__details-brand">
-                <p><span class="product__brand">brand:</span> Nike</p>
-              </div>
-              <div class="product__details-price">
-                <span class="product__price">price:</span>
-                <p class="product__price-after-discount"><strong>500 $</strong></p>
-                <p class="product__price-before-discount">500 $</p>
-                <p class="product__price-discount">(50% off)</p>
-              </div>
-              <div class="product__details-seller">
-                <p><span class="product__seller">seller:</span> Amazon</p>
-              </div>
-            </div>
-          </a>
-            <button class="button__add-to-cart">Add to cart</button>
-        </li>
-
-        <li value="600" class="product">
-          <a href="./product-details/product-details.html" class="product__details-link">
-            <div class="product__image"> 
-              <img src = "./img/product-women-rose-dress.svg" alt="dress orange"/>
-            </div>
-            <div class="product__details-container">
-              <div class="product__details-title">Beautiful Rose Dress</div>
-              <div class="product__details-category">
-                <p><span class="product__category">category:</span> Clothes</p>
-              </div>
-              <div class="product__details-brand">
-                <p><span class="product__brand">brand:</span> Nike</p>
-              </div>
-              <div class="product__details-price">
-                <span class="product__price">price:</span>
-                <p class="product__price-after-discount"><strong>600 $</strong></p>
-                <p class="product__price-before-discount">600 $</p>
-                <p class="product__price-discount">(60% off)</p>
-              </div>
-              <div class="product__details-seller">
-                <p><span class="product__seller">seller:</span> Amazon</p>
-              </div>
-            </div>
-          </a>
-            <button class="button__add-to-cart">Add to cart</button>
-        </li>
-
-        <li value="300" class="product">
-          <a href="./product-details/product-details.html" class="product__details-link">
-            <div class="product__image"> 
-              <img src = "./img/product-woman-dress-orange.svg" alt="dress orange"/>
-            </div>
-            <div class="product__details-container">
-              <div class="product__details-title">Beautiful Orange Dress</div>
-              <div class="product__details-category">
-                <p><span class="product__category">category:</span> Clothes</p>
-              </div>
-              <div class="product__details-brand">
-                <p><span class="product__brand">brand:</span> Nike</p>
-              </div>
-              <div class="product__details-price">
-                <span class="product__price">price:</span>
-                <p class="product__price-after-discount"><strong>300 $</strong></p>
-                <p class="product__price-before-discount">300 $</p>
-                <p class="product__price-discount">(30% off)</p>
-              </div>
-              <div class="product__details-seller">
-                <p><span class="product__seller">seller:</span> Amazon</p>
-              </div>
-            </div>
-          </a>
-            <button class="button__add-to-cart">Add to cart</button>
-        </li>
-
-        <li value="400" class="product">
-          <a href="./product-details/product-details.html" class="product__details-link">
-            <div class="product__image"> 
-              <img src = "./img/product-woman-red-dress.svg" alt="dress red"/>
-            </div>
-            <div class="product__details-container">
-              <div class="product__details-title">Beautiful Rose Dress</div>
-              <div class="product__details-category">
-                <p><span class="product__category">category:</span> Clothes</p>
-              </div>
-              <div class="product__details-brand">
-                <p><span class="product__brand">brand:</span> Nike</p>
-              </div>
-              <div class="product__details-price">
-                <span class="product__price">price:</span>
-                <p class="product__price-after-discount"><strong>400 $</strong></p>
-                <p class="product__price-before-discount">400 $</p>
-                <p class="product__price-discount">(40% off)</p>
-              </div>
-              <div class="product__details-seller">
-                <p><span class="product__seller">seller:</span> Amazon</p>
-              </div>
-            </div>
-          </a>
-            <button class="button__add-to-cart">Add to cart</button>
-        </li>
-
-        <li value="500" class="product">
-          <a href="./product-details/product-details.html" class="product__details-link">
-            <div class="product__image"> 
-              <img src = "./img/product-woman-denim-jacket.svg" alt="denim"/>
-            </div>
-            <div class="product__details-container">
-              <div class="product__details-title">Beautiful Rose Dress</div>
-              <div class="product__details-category">
-                <p><span class="product__category">category:</span> Clothes</p>
-              </div>
-              <div class="product__details-brand">
-                <p><span class="product__brand">brand:</span> Nike</p>
-              </div>
-              <div class="product__details-price">
-                <span class="product__price">price:</span>
-                <p class="product__price-after-discount"><strong>500 $</strong></p>
-                <p class="product__price-before-discount">500 $</p>
-                <p class="product__price-discount">(50% off)</p>
-              </div>
-              <div class="product__details-seller">
-                <p><span class="product__seller">seller:</span> Amazon</p>
-              </div>
-            </div>
-          </a>
-            <button class="button__add-to-cart">Add to cart</button>
-        </li>
-        
-      </section>
-    </main>
-
-    <footer>
-      <p class="terms">Terms & Conditions</p>
-      <p class="terms">Privacy Policy</p>
-      <div class="social">
-        <p class="social-icon"><ion-icon name="logo-facebook"></ion-icon></p>
-        <p class="social-icon"><ion-icon name="logo-instagram"></ion-icon></p>
-        <p class="social-icon"><ion-icon name="logo-whatsapp"></ion-icon></p>
-        <p class="social-icon"><ion-icon name="logo-twitter"></ion-icon></p>
-    </div>
-    </footer>
-
-    <script src="main.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="main.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
   </body>
 </html>

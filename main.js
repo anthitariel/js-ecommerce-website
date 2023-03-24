@@ -1,113 +1,184 @@
-function sortList() {
+// render products
 
-	//choose "sort by price" button value
-	const selectButton = document.getElementById("sort-by-price")
-	selectButton.addEventListener('change', (e) => {
+const renderProductCatalog = (products) => {
+    
+    const productsCatalog = document.querySelector('.product__catalog');
+    productsCatalog.innerHTML = '';
+    let productsInCart = JSON.parse(localStorage.getItem('productsIdArray'));
 
-		let i, shouldSwitch, switchcount = 0;
-		let direction = e.target.value;
-		const productCatalog = document.querySelector(".product__catalog");
-		const productList = productCatalog.getElementsByClassName("product");
-		let switching = true;
-		
-		// Make a loop that will continue until no switching has been done:
-		while (switching) {
-		// Start by saying: no switching is done:
-		switching = false;
-		// Loop through all list-items:
-		for (i = 0; i < (productList.length - 1); i++) {
-		  // Start by saying there should be no switching:
-		  shouldSwitch = false;
-		  /* Check if the next item should switch place with the current item,
-		  based on the sorting directionection (asc or desc): */
-		  if (direction == "Ascending") {
-			  if (Number(productList[i].value) > Number(productList[i + 1].value)) {
-			  /* If next item is alphabetically lower than current item,
-			  mark as a switch and break the loop: */
-			  shouldSwitch = true;
-			  break;
-			}
-		  } else if (direction == "Descending") {
-			  if (Number(productList[i].value) < Number(productList[i + 1].value)) {
-			  /* If next item is alphabetically higher than current item,
-			  mark as a switch and break the loop: */
-			  shouldSwitch= true;
-			  break;
-			}
-		  }
-		}
-		if (shouldSwitch) {
-		  /* If a switch has been marked, make the switch
-		  and mark that a switch has been done: */
-		  productList[i].parentNode.insertBefore(productList[i + 1], productList[i]);		
-		  switching = true;
-		  // Each time a switch is done, increase switchcount by 1:
-		  switchcount ++;
-		} else {
-		  /* If no switching has been done AND the direction is "asc", 
-		  set the direction to "desc" and run the while loop again. */
-		  if (switchcount == 0 && direction == "Ascending") {
-			direction = "Descending";
-			switching = true;
-		  }
-		}
-	  }
-  	});
-  }
+    products.forEach(product => {
+        let countDiscount = product.discountPercentage / 100;
+        let productId = String(product.id);
+        let isProductInCart = productsInCart && productsInCart.includes(productId);
+        const productTitle = product.title.replace(/[^a-z0-9A-Z]/gi, ' ').trim().replace(product.title[0], product.title[0].toUpperCase());
+        product.title = productTitle;
 
-sortList()
-
-
-function addToCart() {
-
-	let cart = document.querySelector(".icon__add-to-cart")
-	let addToCartBtn = document.getElementsByClassName("button__add-to-cart")
-
-  	for(let btn of addToCartBtn) {
-		btn.onclick = e=> {
-			let item = Number(cart.getAttribute('data-count') || 0);
-			cart.setAttribute('data-count', item + 1)
-			cart.classList.add('on')
-			console.log('1')
-		}
-	}
-}
-
-addToCart()
-
-// Search on the homepage
-
-//  get the input by id and all product list items 
-let searchInput = document.getElementById("searchInput");
-let items = document.querySelectorAll(".product");
-
-// add an event handler to the input field
-searchInput.addEventListener("input", function (e) {
-  showResult(false);
-  let isResult = false;
-  const input = e.target;
-  if (input.value) {
-    const toMatch = input.value.toLowerCase().trim();
-    for (let i = 0; i < items.length; i++) {
-      const match = items[i].innerHTML.toLowerCase().includes(toMatch);
-      items[i].style.display = match ? "block" : "none";
-      if (match) isResult = true;
-    }
-	//  show results
-    if (!isResult) showResult(true)
-  } else clear();
-});
-
-// clear any previous results from the page and looping through the search results list
-function clearList() {
-     for (let i = 0; i < items.length; i++) items[i].style.display = "block";
+    productsCatalog.insertAdjacentHTML('beforeend', `
+        <div class="product" data-price="${product.price - (product.price * countDiscount)}">
+            <a href="product-details/product-details.html" class="product__details-link" data-id="${productId}">
+                <div class="product__image">
+                    <img src="${product.thumbnail}" alt="Photo of ${product.title}"">
+                </div>
+                <div class="product__details-container">
+                    <h3 class="product__details-title" data-title="${product.title.toLowerCase()}" ">${product.title}</h3>
+                    <p><span class="product__category">category:</span> ${product.category.replace(product.category[0], product.category[0].toUpperCase())}</p>
+                    <div class="product__details-brand">
+                        <p><span class="product__brand">brand:</span> ${product.brand}</p>
+                    </div>                
+                       <div class="product__details-price">
+                           <span class="product__price">price:</span>
+                           <p class="product__price-after-discount"><strong>${(product.price - (product.price * countDiscount)).toLocaleString('en-US', {maximumFractionDigits: 2})} &dollar;</strong></p>
+                           <p class="product__price-before-discount">${product.price.toLocaleString('en-US', {maximumFractionDigits: 2})} &dollar;</p>
+                           <p class="product__price-discount">(${product.discountPercentage}% off)</p>
+                       </div>                
+                    <p><span class="product__seller">seller:</span> ${product.seller}</p>
+                </div>
+                <div class="product__details-button">
+                    <a class="button__add-to-cart ${isProductInCart && 'remove'}" data-id="${productId}">${isProductInCart ? 'Remove from cart' : 'Add to cart'}</a>
+                </div>
+            </a>
+        </div>
+        `)
+    })
+    searchNotFound(productsCatalog);
 }
 
 // receive a not found message with a search value 
-function showResult(item) {
-	let notFound = document.getElementById("no-result");
-  	notFound.style.display = item ? "block" : "none";
-	document.getElementById("search-value").innerHTML = searchInput.value;
-  	}
-showResult(false);
+
+const searchNotFound = (container) => {
+    const searchInput = document.querySelector('.navbar__search-input');
+    if(container.innerHTML === '') container.insertAdjacentHTML('beforeend', `
+    <div class="search__not-found-text">
+        <h1>No matching product found for: ${searchInput.value}</h1>
+    </div>
+   `)
+}
+
+const getProductDetailsId = () => {
+    const productsSection = document.querySelector('.product__catalog');
+    productsSection.addEventListener('click', (event) => {
+        if(event.target.closest('.product__details-link')) {
+            localStorage.setItem('productId', event.target.closest('.product__details-link').dataset.id)
+        }
+    })
+}
+
+// sort products
+
+const sortByCondition = (arr, sortCondition = undefined) => {
+    if (sortCondition) {
+        arr.sort((a, b) => {
+            const priceAscending = a.price - (a.price * a.discountPercentage) / 100;
+            const priceDescending = b.price - (b.price * b.discountPercentage) / 100;
+            return sortCondition === 'Ascending' ? priceAscending - priceDescending : priceDescending - priceAscending;
+        });
+    }
+}
+
+// add-to-cart
+
+const addToCart = () => {
+    
+    const productsSection = document.querySelector('.product__catalog');
+    const basket = document.querySelector('.navbar__products-in-cart');
+    const productsInCart = document.querySelector('.count__products-in-cart');
+
+    productsSection.addEventListener('click', (event) => {
+        let currentProductId = event.target.dataset.id;
+        if (currentProductId) {
+            let isInCart = event.target.classList.contains('remove');
+            let productsArray = localStorage.getItem("productsIdArray");
+
+            productsArray === null ? productsArray = [] : productsArray = JSON.parse(productsArray);
+
+        if (!isInCart) {
+                event.target.classList.add('remove');
+                event.target.innerText = 'Remove from cart';
+                basket.classList.remove('count__hidden');
+                if (!productsArray.includes(currentProductId)) {
+                    productsArray.push(currentProductId);
+                }
+        } else {
+                event.target.classList.remove('remove')
+                event.target.innerText = 'Add to cart';
+                if (productsArray.includes(currentProductId)) {
+                    productsArray.splice(productsArray.indexOf(currentProductId), 1);
+                }
+        }
+
+        productsArray = JSON.stringify(productsArray);
+        localStorage.setItem("productsIdArray", productsArray);
+
+            productsInCart.innerHTML = JSON.parse(localStorage.getItem("productsIdArray")).length;
+
+        if(JSON.parse(localStorage.getItem('productsIdArray')).length === 0) {
+                basket.classList.add('count__hidden')
+        }
+        }
+    })
+    if (JSON.parse(localStorage.getItem('productsIdArray')) && JSON.parse(localStorage.getItem('productsIdArray')).length > 0) {
+        basket.classList.remove('count__hidden');
+        productsInCart.innerHTML = JSON.parse(localStorage.getItem("productsIdArray")).length;
+    }
+}
+
+// debounce data
+
+const debounce = (func, time) => {
+    let timeout;
+
+    return (...args) => {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+            func(...args)
+        }, time)
+    }
+}
+
+// fetch data
+
+(async () => {
+    try {
+        const request = await fetch('data-products.json')
+        const data = await request.json();
+        console.log(data)
+        const dataInitialState = data.products;
+        let clonedArr;
+        let currentSortCondition = 'Ascending';
+        const sortButton = document.querySelector('#sort-by-price');
+        const searchInput = document.querySelector('.navbar__search-input');
+
+        sortByCondition(dataInitialState, currentSortCondition);
+        clonedArr = [...dataInitialState];
+
+        renderProductCatalog(dataInitialState);
+
+        currentSortCondition = sortButton.value;
+        sortButton.addEventListener('change', (e) => {
+            currentSortCondition = e.target.value;
+            sortByCondition(dataInitialState, currentSortCondition);
+            sortByCondition(clonedArr, currentSortCondition);
+            renderProductCatalog(clonedArr);
+        })
+
+        // Search on the homepage
+
+        searchInput.addEventListener('input', debounce((e) => {
+            let userInputValue = e.target.value;
+            
+            clonedArr = dataInitialState.filter(product => product.title.toLowerCase().includes(userInputValue.toLowerCase()))
+            renderProductCatalog(clonedArr);
+
+            if(userInputValue === '') {
+                sortByCondition(dataInitialState, currentSortCondition);
+                clonedArr = dataInitialState;
+                renderProductCatalog(clonedArr);
+            }
+        }, 500))
+    } catch (err) {
+        console.warn(err);
+    }
+    getProductDetailsId();
+    addToCart();
+})();
 

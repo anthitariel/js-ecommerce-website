@@ -1,0 +1,159 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Black Jacket",
+      "description": "Premium denim & selvage fabrics from Japan.",
+      "price": 600,
+      "discountPercentage": 10,
+      "rating": 4,
+      "seller": "Amazon",
+      "stock": 94,
+      "brand": "Adidas",
+      "category": "Clothes",
+      "thumbnail": "../img/product-image-1.svg",
+      "images": [
+        "../img/product-image-2.svg",
+        "../img/product-image-3.svg",
+        "../img/product-image-4.svg",
+        "../img/product-image-5.svg"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Amazing Black Jacket",
+      "description": "A Premium denim & selvage fabrics from Japan.",
+      "price": 100,
+      "discountPercentage": 20,
+      "rating": 3,
+      "seller": "Amazon",
+      "stock": 94,
+      "brand": "Adidas",
+      "category": "Clothes",
+      "thumbnail": "../img/product-image-2.svg",
+      "images": [
+        "../img/product-image-2.svg",
+        "../img/product-image-3.svg",
+        "../img/product-image-4.svg",
+        "../img/product-image-5.svg"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Beautiful Blue Dress",
+      "description": "Premium denim & selvage fabrics from Japan.",
+      "price": 200,
+      "discountPercentage": 50,
+      "rating": 5,
+      "seller": "Amazon",
+      "stock": 94,
+      "brand": "Adidas",
+      "category": "Clothes",
+      "thumbnail": "../img/product-image-3.svg",
+      "images": [
+        "../img/product-image-2.svg",
+        "../img/product-image-3.svg",
+        "../img/product-image-4.svg",
+        "../img/product-image-5.svg"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Beautiful Rose Jacket",
+      "description": "Premium denim & selvage fabrics from Japan.",
+      "price": 1100,
+      "discountPercentage": 60,
+      "rating": 3,
+      "seller": "Amazon",
+      "stock": 94,
+      "brand": "Adidas",
+      "category": "Clothes",
+      "thumbnail": "../img/product-image-4.svg",
+      "images": [
+        "../img/product-image-2.svg",
+        "../img/product-image-3.svg",
+        "../img/product-image-4.svg",
+        "../img/product-image-5.svg"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Beautiful Rose Dress",
+      "description": "Premium denim & selvage fabrics from Japan.",
+      "price": 800,
+      "discountPercentage": 20,
+      "rating": 5,
+      "seller": "Amazon",
+      "stock": 1,
+      "brand": "Adidas",
+      "category": "Clothes",
+      "thumbnail": "../img/product-image-5.svg",
+      "images": [
+        "../img/product-image-2.svg",
+        "../img/product-image-3.svg",
+        "../img/product-image-4.svg",
+        "../img/product-image-5.svg"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Beautiful Orange Dress",
+      "description": "A Premium denim & selvage fabrics from Japan.",
+      "price": 500,
+      "discountPercentage": 30,
+      "rating": 4,
+      "seller": "Amazon",
+      "stock": 4,
+      "brand": "Adidas",
+      "category": "Clothes",
+      "thumbnail": "../img/product-image-6.svg",
+      "images": [
+        "../img/product-image-2.svg",
+        "../img/product-image-3.svg",
+        "../img/product-image-4.svg",
+        "../img/product-image-5.svg"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Blue Denim Jacket",
+      "description": "Premium denim & selvage fabrics from Japan.",
+      "price": 400,
+      "discountPercentage": 40,
+      "rating": 5,
+      "seller": "Amazon",
+      "stock": 3,
+      "brand": "Adidas",
+      "category": "Clothes",
+      "thumbnail": "../img/product-image-7.svg",
+      "images": [
+        "../img/product-image-2.svg",
+        "../img/product-image-3.svg",
+        "../img/product-image-4.svg",
+        "../img/product-image-5.svg"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Beatiful Red Dress",
+      "description": "A Premium denim & selvage fabrics from Japan.",
+      "price": 600,
+      "discountPercentage": 90,
+      "rating": 5,
+      "seller": "Amazon",
+      "stock": 7,
+      "brand": "Adidas",
+      "category": "Clothes",
+      "thumbnail": "../img/product-image-7.svg",
+      "images": [
+        "../img/product-image-2.svg",
+        "../img/product-image-3.svg",
+        "../img/product-image-4.svg",
+        "../img/product-image-5.svg"
+      ]
+    }
+  ],
+  "total": 8,
+  "skip": 0,
+  "limit": 100
+}
