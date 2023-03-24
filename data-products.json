@@ -11,12 +11,12 @@
       "stock": 94,
       "brand": "Adidas",
       "category": "Clothes",
-      "thumbnail": "../img/product-image-1.svg",
+      "thumbnail": "img/product-image-1.svg",
       "images": [
-        "../img/product-image-2.svg",
-        "../img/product-image-3.svg",
-        "../img/product-image-4.svg",
-        "../img/product-image-5.svg"
+        "img/product-image-2.svg",
+        "img/product-image-3.svg",
+        "img/product-image-4.svg",
+        "img/product-image-5.svg"
       ]
     },
     {
@@ -30,12 +30,12 @@
       "stock": 94,
       "brand": "Adidas",
       "category": "Clothes",
-      "thumbnail": "../img/product-image-2.svg",
+      "thumbnail": "img/product-image-2.svg",
       "images": [
-        "../img/product-image-2.svg",
-        "../img/product-image-3.svg",
-        "../img/product-image-4.svg",
-        "../img/product-image-5.svg"
+        "img/product-image-2.svg",
+        "img/product-image-3.svg",
+        "img/product-image-4.svg",
+        "img/product-image-5.svg"
       ]
     },
     {
@@ -49,12 +49,12 @@
       "stock": 94,
       "brand": "Adidas",
       "category": "Clothes",
-      "thumbnail": "../img/product-image-3.svg",
+      "thumbnail": "img/product-image-3.svg",
       "images": [
-        "../img/product-image-2.svg",
-        "../img/product-image-3.svg",
-        "../img/product-image-4.svg",
-        "../img/product-image-5.svg"
+        "img/product-image-2.svg",
+        "img/product-image-3.svg",
+        "img/product-image-4.svg",
+        "img/product-image-5.svg"
       ]
     },
     {
@@ -68,12 +68,12 @@
       "stock": 94,
       "brand": "Adidas",
       "category": "Clothes",
-      "thumbnail": "../img/product-image-4.svg",
+      "thumbnail": "img/product-image-4.svg",
       "images": [
-        "../img/product-image-2.svg",
-        "../img/product-image-3.svg",
-        "../img/product-image-4.svg",
-        "../img/product-image-5.svg"
+        "img/product-image-2.svg",
+        "img/product-image-3.svg",
+        "img/product-image-4.svg",
+        "img/product-image-5.svg"
       ]
     },
     {
@@ -87,12 +87,12 @@
       "stock": 1,
       "brand": "Adidas",
       "category": "Clothes",
-      "thumbnail": "../img/product-image-5.svg",
+      "thumbnail": "img/product-image-5.svg",
       "images": [
-        "../img/product-image-2.svg",
-        "../img/product-image-3.svg",
-        "../img/product-image-4.svg",
-        "../img/product-image-5.svg"
+        "img/product-image-2.svg",
+        "img/product-image-3.svg",
+        "img/product-image-4.svg",
+        "img/product-image-5.svg"
       ]
     },
     {
@@ -106,12 +106,12 @@
       "stock": 4,
       "brand": "Adidas",
       "category": "Clothes",
-      "thumbnail": "../img/product-image-6.svg",
+      "thumbnail": "img/product-image-6.svg",
       "images": [
-        "../img/product-image-2.svg",
-        "../img/product-image-3.svg",
-        "../img/product-image-4.svg",
-        "../img/product-image-5.svg"
+        "img/product-image-2.svg",
+        "img/product-image-3.svg",
+        "img/product-image-4.svg",
+        "img/product-image-5.svg"
       ]
     },
     {
@@ -125,12 +125,12 @@
       "stock": 3,
       "brand": "Adidas",
       "category": "Clothes",
-      "thumbnail": "../img/product-image-7.svg",
+      "thumbnail": "img/product-image-7.svg",
       "images": [
-        "../img/product-image-2.svg",
-        "../img/product-image-3.svg",
-        "../img/product-image-4.svg",
-        "../img/product-image-5.svg"
+        "img/product-image-2.svg",
+        "img/product-image-3.svg",
+        "img/product-image-4.svg",
+        "img/product-image-5.svg"
       ]
     },
     {
@@ -144,12 +144,12 @@
       "stock": 7,
       "brand": "Adidas",
       "category": "Clothes",
-      "thumbnail": "../img/product-image-7.svg",
+      "thumbnail": "img/product-image-7.svg",
       "images": [
-        "../img/product-image-2.svg",
-        "../img/product-image-3.svg",
-        "../img/product-image-4.svg",
-        "../img/product-image-5.svg"
+        "img/product-image-2.svg",
+        "img/product-image-3.svg",
+        "img/product-image-4.svg",
+        "img/product-image-5.svg"
       ]
     }
   ],
