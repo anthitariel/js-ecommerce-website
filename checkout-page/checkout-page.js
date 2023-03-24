@@ -19,7 +19,7 @@ const renderCart = (productsArr) => {
             checkoutContainer.insertAdjacentHTML('afterbegin', `
         <div class="checkout__items" data-id="${product.id}">
             <div class="checkout__form-image-container">
-                <img src="${product.thumbnail}" alt="" class="checkout__form-image">
+                <img src="../${product.thumbnail}" alt="" class="checkout__form-image">
             </div>
             <div class="product">
                     <h3 class="product__details-title">${fixedProductTitle}</h3>

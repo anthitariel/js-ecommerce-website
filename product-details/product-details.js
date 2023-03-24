@@ -8,7 +8,7 @@ const renderProductDetails = (product, fullProductsArray) => {
     let imageCarousel = product[0].images.map((image, i) => {
         return `
         <div class="product__details-slide-small">
-            <img src="${image}" alt="" class="image-${i} carousel-slide-small ${i === 0 ? 'selected-slide' : ''}">
+            <img src="../${image}" alt="" class="image-${i} carousel-slide-small ${i === 0 ? 'selected-slide' : ''}">
         </div>
         `
     })
@@ -29,7 +29,7 @@ productDetails.insertAdjacentHTML('beforeend', `
                 ${imageCarousel.join('')}
             </div>
             <div class="product__details-carousel-large" data-id="${product[0].id}">
-                <img src="${product[0].images[0]}" alt="Image of ${productsTitle}" class="carousel-slide-large">
+                <img src="../${product[0].images[0]}" alt="Image of ${productsTitle}" class="carousel-slide-large">
             </div>
         </div>
     
@@ -89,7 +89,7 @@ productDetails.insertAdjacentHTML('beforeend', `
                 <div class="product__similar-card" data-id="${similarProduct.id}">
                     <a href="../product-details/product-details.html" class="product__similar-card-link">
                         <div class="product__similar-card-image">
-                            <img class="similar-card-image" src="${similarProduct.thumbnail}" alt="${similarProduct.title}">
+                            <img class="similar-card-image" src="../${similarProduct.thumbnail}" alt="${similarProduct.title}">
                         </div>
                         <div class="product__similar-card-details">
                             <h3 class="product__similar-title"">${similarProduct.title}</h3>
