@@ -137,8 +137,7 @@ body {
   overflow: hidden;
 }
 
-.product__details-slide-small img,
-.product__details-carousel-large .carousel-slide-large {
+img {
   width: 100%;
   height: 100%;
   border-radius: 0.5rem;
