@@ -264,9 +264,10 @@ img:hover {
 
 .button__add-to-cart {
   display: block;
+  background-color: #a51d2a;
   text-align: center;
   cursor: pointer;
-  padding: 1rem 2rem;
+  padding: 5% 0;
   background-color: #0250c4;
   color: #fff;
   border: none;
@@ -285,7 +286,7 @@ img:hover {
 }
 
 .button__add-to-cart.remove {
-  background-color: rgb(165, 29, 42);
+  background-color: #a51d2a;
 }
 .button__add-to-cart.remove:hover {
   background-color: #7a151f;

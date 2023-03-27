@@ -275,7 +275,15 @@ img {
 }
 
 .button__add-to-cart--small:hover {
-  background-color: #0343a3;
+  background-color: #013b92;
+}
+
+.button__add-to-cart--small.remove {
+  background-color: #a51d2a;
+}
+
+.button__add-to-cart--small:hover {
+  background-color: #7a151f;
 }
 
 /*------------------------------------*\
