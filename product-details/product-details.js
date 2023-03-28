@@ -85,7 +85,7 @@ productDetails.insertAdjacentHTML('beforeend', `
         });
 
         return filteredByCategory.map((similarProduct, i) => {
-            return i < 5 ? `
+            return  i < 5 ? `
                 <div class="product__similar-card" data-id="${similarProduct.id}">
                     <a href="../product-details/product-details.html" class="product__similar-card-link">
                         <div class="product__similar-card-image">
@@ -102,17 +102,16 @@ productDetails.insertAdjacentHTML('beforeend', `
                                 <p class="product__rating-icon">${similarProduct.rating} <ion-icon name="star"></ion-icon></p>
                             </div>
                             <div class="product__details-price">
-                                <p class="product__price">price: </p>
-                                <p class="product__price-after-discount">${(product[0].price - (product[0].price * (product[0].discountPercentage / 100))).toLocaleString('en-US', {maximumFractionDigits: 2})}&dollar;</p>
-                                <p class="product__price-before-discount" style="text-decoration: line-through; opacity: 0.7;">${product[0].price.toLocaleString('en-US', {maximumFractionDigits: 2})}&dollar;</p>
-                                <p class="product__price-discount">(${product[0].discountPercentage}% off)</p>
+                                <p class="product__price">price: </p> 
+                                <p class="product__price-after-discount">${(similarProduct.price - (similarProduct.price * (similarProduct.discountPercentage / 100))).toLocaleString('en-US', {maximumFractionDigits: 2})}&dollar;</p>
+                                <p class="product__price-before-discount">${similarProduct.price.toLocaleString('en-US', {maximumFractionDigits: 2})}&dollar;</p>
+                                <p class="product__price-discount">(${similarProduct.discountPercentage}% off)</p>
                             </div>
                         </div>
                     </a>
                 </div>
             ` : ''
         })
-
     }
 
     similarProducts.insertAdjacentHTML('beforeend', `
