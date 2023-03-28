@@ -279,11 +279,11 @@ img {
   background-color: #013b92;
 }
 
-.button__add-to-cart--small.remove {
+.remove {
   background-color: #a51d2a;
 }
 
-.button__add-to-cart--small:hover {
+.remove:hover {
   background-color: #7a151f;
 }
 

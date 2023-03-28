@@ -67,8 +67,8 @@ productDetails.insertAdjacentHTML('beforeend', `
             <div class="product__details-price">
                 <p class="product__price">price: </p>
                 <p class="product__price-after-discount">${(product[0].price - (product[0].price * (product[0].discountPercentage / 100))).toLocaleString('en-US', {maximumFractionDigits: 2})}&dollar;</p>
-                <p class="product__price-before-discount" style="text-decoration: line-through; opacity: 0.7;">${product[0].price.toLocaleString('en-US', {maximumFractionDigits: 2})}&dollar;</p>
-                <p class="product__price-discount" style="color: #0A8200;">(${product[0].discountPercentage}% off)</p>
+                <p class="product__price-before-discount">${product[0].price.toLocaleString('en-US', {maximumFractionDigits: 2})}&dollar;</p>
+                <p class="product__price-discount">(${product[0].discountPercentage}% off)</p>
             </div>
             <button class="button__add-to-cart--small" data-id="${product[0].id}">Add to cart</button>
         </div>
@@ -104,8 +104,8 @@ productDetails.insertAdjacentHTML('beforeend', `
                             <div class="product__details-price">
                                 <p class="product__price">price: </p>
                                 <p class="product__price-after-discount">${(product[0].price - (product[0].price * (product[0].discountPercentage / 100))).toLocaleString('en-US', {maximumFractionDigits: 2})}&dollar;</p>
-                                <p class="pproduct__price-before-discount" style="text-decoration: line-through; opacity: 0.7;">${product[0].price.toLocaleString('en-US', {maximumFractionDigits: 2})}&dollar;</p>
-                                <p class="product__price-discount" style="color: #0A8200;">(${product[0].discountPercentage}% off)</p>
+                                <p class="product__price-before-discount" style="text-decoration: line-through; opacity: 0.7;">${product[0].price.toLocaleString('en-US', {maximumFractionDigits: 2})}&dollar;</p>
+                                <p class="product__price-discount">(${product[0].discountPercentage}% off)</p>
                             </div>
                         </div>
                     </a>
