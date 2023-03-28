@@ -5,7 +5,7 @@ const renderProductDetails = (product, fullProductsArray) => {
     const similarProducts = document.querySelector('.product__similar');
     const productsTitle = product[0].title.replace(/[^a-z0-9A-Z]/gi, ' ').trim().replace(product[0].title[0], product[0].title[0].toUpperCase());
 
-    let imageCarousel = product[0].images.map((image, i) => {
+    let getImages = product[0].images.map((image, i) => {
         return `
         <div class="product__details-slide-small">
             <img src="../${image}" alt="" class="image-${i} carousel-slide-small ${i === 0 ? 'selected-slide' : ''}">
@@ -26,7 +26,7 @@ const addStars = (product) => {
 productDetails.insertAdjacentHTML('beforeend', `
         <div class="product__details-carousel">
             <div class="product__details-carousel-slides">
-                ${imageCarousel.join('')}
+                ${getImages.join('')}
             </div>
             <div class="product__details-carousel-large" data-id="${product[0].id}">
                 <img src="../${product[0].images[0]}" alt="Image of ${productsTitle}" class="carousel-slide-large">

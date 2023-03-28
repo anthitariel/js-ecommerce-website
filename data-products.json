@@ -16,12 +16,14 @@
         "img/product-image-2.svg",
         "img/product-image-3.svg",
         "img/product-image-4.svg",
-        "img/product-image-5.svg"
+        "img/product-image-5.svg",
+        "img/product-image-6.svg",
+        "img/product-image-7.svg"
       ]
     },
     {
       "id": 2,
-      "title": "Amazing Black Jacket",
+      "title": "Amazing Denim Jacket",
       "description": "A Premium denim & selvage fabrics from Japan.",
       "price": 100,
       "discountPercentage": 20,
@@ -42,7 +44,7 @@
     },
     {
       "id": 3,
-      "title": "Beautiful Blue Dress",
+      "title": "Summer Rose Dress",
       "description": "Premium denim & selvage fabrics from Japan.",
       "price": 200,
       "discountPercentage": 50,
@@ -63,7 +65,7 @@
     },
     {
       "id": 4,
-      "title": "Beautiful Rose Jacket",
+      "title": "Amazing Orange Dress",
       "description": "Premium denim & selvage fabrics from Japan.",
       "price": 1100,
       "discountPercentage": 60,
@@ -84,7 +86,7 @@
     },
     {
       "id": 5,
-      "title": "Beautiful Rose Dress",
+      "title": "Beautiful Blouse",
       "description": "Premium denim & selvage fabrics from Japan.",
       "price": 800,
       "discountPercentage": 20,
@@ -105,7 +107,7 @@
     },
     {
       "id": 6,
-      "title": "Beautiful Orange Dress",
+      "title": "Beautiful Red Dress",
       "description": "A Premium denim & selvage fabrics from Japan.",
       "price": 500,
       "discountPercentage": 30,
@@ -126,7 +128,7 @@
     },
     {
       "id": 7,
-      "title": "Blue Denim Jacket",
+      "title": "Beautiful Red Dress",
       "description": "Premium denim & selvage fabrics from Japan.",
       "price": 400,
       "discountPercentage": 40,
