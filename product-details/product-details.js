@@ -64,7 +64,7 @@ productDetails.insertAdjacentHTML('beforeend', `
                 <ion-icon name="star-outline" class="rating-star"></ion-icon>
                 <p class="product__rating-text">${product[0].rating}</p>
             </div>
-            <div class="product__price">
+            <div class="product__details-price">
                 <p class="product__price">price: </p>
                 <p class="product__price-after-discount">${(product[0].price - (product[0].price * (product[0].discountPercentage / 100))).toLocaleString('en-US', {maximumFractionDigits: 2})}&dollar;</p>
                 <p class="product__price-before-discount" style="text-decoration: line-through; opacity: 0.7;">${product[0].price.toLocaleString('en-US', {maximumFractionDigits: 2})}&dollar;</p>
