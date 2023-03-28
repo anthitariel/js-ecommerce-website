@@ -141,7 +141,6 @@ const debounce = (func, time) => {
     try {
         const request = await fetch('data-products.json')
         const data = await request.json();
-        console.log(data)
         const dataInitialState = data.products;
         let clonedArr;
         let currentSortCondition = 'Ascending';
