@@ -104,9 +104,10 @@ const removeFromCart = () => {
             }
         }
     })
-    if (localStorageGet('productsIdArray') && localStorageGet('productsIdArray').length > 0) {
-        containerProductsInCart.classList.remove('count__hidden');
-        productsInCart.innerHTML = localStorageGet('productsIdArray').length;
+    const productsIdArray = localStorageGet('productsIdArray');
+    if (productsIdArray && productsIdArray.length > 0) {
+    productsInCartContainer.classList.remove('count__hidden');
+    productsInCartCount.innerHTML = productsIdArray.length;
     }
 }
 
