@@ -1,17 +1,24 @@
 // render products
 
 const renderProductCatalog = (products) => {
-    
+
+    // select the location where the product catalog will be displayed
     const productsCatalog = document.querySelector('.product__catalog');
+    // define that product catalog is empty
     productsCatalog.innerHTML = '';
+    // get items from the local storage
     let productsInCart = JSON.parse(localStorage.getItem('productsIdArray'));
 
+    // loop through all products in the array
     products.forEach(product => {
         let countDiscount = product.discountPercentage / 100;
         let productId = String(product.id);
         let isProductInCart = productsInCart && productsInCart.includes(productId);
+        // edit the titles of product - should be without spacing and with upper case
         const productTitle = product.title.replace(/[^a-z0-9A-Z]/gi, ' ').trim().replace(product.title[0], product.title[0].toUpperCase());
         product.title = productTitle;
+
+    // parse and inserts the products into the DOM at the product catalog location
 
     productsCatalog.insertAdjacentHTML('beforeend', `
         <div class="product" data-price="${product.price - (product.price * countDiscount)}">
@@ -40,6 +47,7 @@ const renderProductCatalog = (products) => {
         </div>
         `)
     })
+    // add message to search if not found
     searchNotFound(productsCatalog);
 }
 
@@ -53,6 +61,8 @@ const searchNotFound = (container) => {
     </div>
    `)
 }
+
+// add event handlers
 
 const getProductDetailsId = () => {
     const productsSection = document.querySelector('.product__catalog');
