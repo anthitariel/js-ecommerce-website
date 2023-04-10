@@ -1,24 +1,17 @@
 // render products
 
 const renderProductCatalog = (products) => {
-
-    // select the location where the product catalog will be displayed
+    
     const productsCatalog = document.querySelector('.product__catalog');
-    // define that product catalog is empty
     productsCatalog.innerHTML = '';
-    // get items from the local storage
     let productsInCart = JSON.parse(localStorage.getItem('productsIdArray'));
 
-    // loop through all products in the array
     products.forEach(product => {
         let countDiscount = product.discountPercentage / 100;
         let productId = String(product.id);
         let isProductInCart = productsInCart && productsInCart.includes(productId);
-        // edit the titles of product - should be without spacing and with upper case
         const productTitle = product.title.replace(/[^a-z0-9A-Z]/gi, ' ').trim().replace(product.title[0], product.title[0].toUpperCase());
         product.title = productTitle;
-
-    // parse and inserts the products into the DOM at the product catalog location
 
     productsCatalog.insertAdjacentHTML('beforeend', `
         <div class="product" data-price="${product.price - (product.price * countDiscount)}">
@@ -47,7 +40,6 @@ const renderProductCatalog = (products) => {
         </div>
         `)
     })
-    // add message to search if not found
     searchNotFound(productsCatalog);
 }
 
@@ -61,8 +53,6 @@ const searchNotFound = (container) => {
     </div>
    `)
 }
-
-// add event handlers
 
 const getProductDetailsId = () => {
     const productsSection = document.querySelector('.product__catalog');
@@ -88,26 +78,19 @@ const sortByCondition = (arr, sortCondition = undefined) => {
 // add-to-cart
 
 const addToCart = () => {
-
+    
     const productsSection = document.querySelector('.product__catalog');
     const basket = document.querySelector('.navbar__products-in-cart');
     const productsInCart = document.querySelector('.count__products-in-cart');
 
-    // add event handler and check the basket
     productsSection.addEventListener('click', (event) => {
-
-        // The currentProductId variable should be parsed to an integer using parseInt() to avoid issues with data types later on.
-        let currentProductId = parseInt(event.target.dataset.id);
-
-        // check the cart if empty, remove the products-in-cart counter else add 
-
+        let currentProductId = event.target.dataset.id;
         if (currentProductId) {
             let isInCart = event.target.classList.contains('remove');
             let productsArray = localStorage.getItem("productsIdArray");
 
             productsArray === null ? productsArray = [] : productsArray = JSON.parse(productsArray);
 
-            // change the button add-to cart to remove from cart
         if (!isInCart) {
                 event.target.classList.add('remove');
                 event.target.innerText = 'Remove from cart';
@@ -115,7 +98,6 @@ const addToCart = () => {
                 if (!productsArray.includes(currentProductId)) {
                     productsArray.push(currentProductId);
                 }
-            // if the cart is empty change the inner text of the button
         } else {
                 event.target.classList.remove('remove')
                 event.target.innerText = 'Add to cart';
@@ -198,5 +180,3 @@ const debounce = (func, time) => {
     getProductDetailsId();
     addToCart();
 })();
-
-
