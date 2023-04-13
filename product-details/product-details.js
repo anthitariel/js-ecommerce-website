@@ -232,3 +232,25 @@ const similarProductSelected = () => {
     }
     addToCart();
 })()
+
+// splide.js
+
+document.addEventListener( 'DOMContentLoaded', function () {
+    new Splide('#splide', {
+      type: 'loop',
+      perPage: 3,
+      focus: 'center',
+      gap: "15%",
+      updateOnMove: true,
+      pagination: false,
+      padding: '10%',
+      throttle: 300,
+      breakpoints: {
+        1440: {
+          perPage: 1,
+          width: "50%",
+          height: "50%",
+        }
+      }
+    }).mount();
+  });

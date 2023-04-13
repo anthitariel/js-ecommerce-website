@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <title>E-commerce website</title>
     <link rel="stylesheet" href="product-details.css" />
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
   </head>
 
   <body>
@@ -33,6 +34,16 @@
     <section class="product__similar">
       <h1>Similar Products</h1>
     </section>
+    <section class="product__similar splide" id="splide" >
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide"><img src="../img/product-image-2.svg"></li>
+          <li class="splide__slide"><img src="../img/product-image-3.svg"></li>
+          <li class="splide__slide"><img src="../img/product-image-4.svg"></li>
+          <li class="splide__slide"><img src="../img/product-image-5.svg"></li>
+        </ul>
+      </div>
+    </section> 
   </main>
 
   <footer>
@@ -49,6 +60,7 @@
   <script src="product-details.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 
 </body>
 </html>
