@@ -237,25 +237,22 @@ const similarProductSelected = () => {
 
 document.addEventListener( 'DOMContentLoaded', function () {
     new Splide('#splide', {
-      type: 'loop',
-      perPage: 4,
-      focus: 'center',
-      gap: "10%",
-      updateOnMove: true,
-      pagination: false,
-      padding: '10%',
-      throttle: 300,
-      width: "100%",
-      height: "100%",
-      breakpoints: {
-        1440: {
-          perPage: 1,
-          width: "50%",
-          height: "50%",
-        }
-      }
+        type: 'loop',
+        perPage: 5,
+        gap: "5%",
+        pagination: false,
+        width: "100%",
+        height: "100%",
+        gap: "5%",
+        
+        
+        breakpoints: {
+            640: {
+                perPage    : 2,
+            },
+        },
     }).mount();
-  });
+});
 
 
   

@@ -146,8 +146,7 @@ img {
 
 .product__similar {
   width: 90%;
-  margin: 0 auto;
-  padding: 6rem 0;
+  margin: 6rem auto;
 }
 
 .product__similar-title h3 {
@@ -291,8 +290,8 @@ img {
   #SPLIDE
 \*------------------------------------*/
 
-.splide {
-  padding: 5% 0;
+.splide__track {
+  padding: 2rem 0;
 }
 
 /*------------------------------------*\
