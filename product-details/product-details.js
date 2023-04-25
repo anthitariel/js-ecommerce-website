@@ -238,13 +238,15 @@ const similarProductSelected = () => {
 document.addEventListener( 'DOMContentLoaded', function () {
     new Splide('#splide', {
       type: 'loop',
-      perPage: 3,
+      perPage: 4,
       focus: 'center',
-      gap: "15%",
+      gap: "10%",
       updateOnMove: true,
       pagination: false,
       padding: '10%',
       throttle: 300,
+      width: "100%",
+      height: "100%",
       breakpoints: {
         1440: {
           perPage: 1,
@@ -254,3 +256,6 @@ document.addEventListener( 'DOMContentLoaded', function () {
       }
     }).mount();
   });
+
+
+  
